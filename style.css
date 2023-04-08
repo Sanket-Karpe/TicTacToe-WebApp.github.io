@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Agustina";
+  src: url(./fonts/Agustina.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sono", sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #8052ec, #d161ff);
+  user-select: none;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  color: #757575;
+  font-weight: 300;
+  font-size: 40px;
+}
+.font-Agustina {
+  color: darkslateblue;
+  font-weight: 400;
+  font-family: "Agustina";
+  font-size: 30px;
+}
+.ticTacToe-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.game-info {
+  color: black;
+  font-weight: 700;
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.247);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1rem 3rem;
+}
+
+.container {
+  width: 410px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.box {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Itim", cursive;
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border: none;
+  border-radius: 8px;
+  font-size: 6rem;
+  color: #d161ff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.win {
+  background-color: aquamarine;
+}
+#restart {
+  font-size: 25px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #0a0027;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(0.4rem);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 4rem;
+  scale: 0;
+  transition: all linear 0.3s;
+  z-index: 10;
+}
+.active {
+  scale: 1;
+}
+
+#newGame {
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #0a0027;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(3px);
+}
+
+@media only screen and (max-width: 1100px) {
+  .logo{
+    display: none;
+  }
+}
